@@ -1,0 +1,21 @@
+# Local deployment and environment files
+.vercel/
+.openai/
+.env
+.env.*
+!.env.example
+
+# Editor settings and generated files
+.vscode/
+.idea/
+node_modules/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local media and export archives
+*.mp4
+*.mov
+*.webm
+*.zip

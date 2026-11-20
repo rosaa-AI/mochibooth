@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#FFF9F5" />
+    <meta
+      name="description"
+      content="A little booth for your happiest moments. Create and download your own Korean-inspired photo strips."
+    />
+    <title>MochiBooth — Your little happy place</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css?v=20261117-wide-view" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#home" aria-label="MochiBooth home"
+        ><span class="logo-icon">◕</span> mochi<span>booth</span><i>✦</i></a
+      >
+      <nav>
+        <a href="#home">The booth</a
+        ><button class="text-button" id="how">How it works ↗</button
+        ><button id="theme" class="theme" aria-label="Toggle lavender theme">
+          ☾
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="page active">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">
+              <span></span> LITTLE MOMENTS, FOREVER MEMORIES
+            </div>
+            <h1>
+              Capture your<br /><em>cutest</em> moments<span
+                class="heading-star"
+                >✧</span
+              >
+            </h1>
+            <p>
+              A little you. A little silly. A whole lot of memories.<br />Your
+              favorite Korean photobooth, wherever you are.
+            </p>
+            <button class="primary" id="start">
+              Start Photobooth <span>↗</span>
+            </button>
+            <div class="privacy">
+              <span>♡</span> Free to use <b>·</b> No sign-up <b>·</b> Just good
+              memories
+            </div>
+            <div class="hand-note">made for your main character moments ⤴</div>
+          </div>
+          <div class="hero-art" aria-label="Illustrated example photostrips">
+            <div class="orbit">✧</div>
+            <div class="sticker smile">☺</div>
+            <div class="sample-strip back">
+              <div class="sample-shot scene-one"><span>✿</span><b>♡</b></div>
+              <div class="sample-shot scene-two"><span>☁</span><b>✌</b></div>
+              <div class="sample-shot scene-three"><span>♡</span><b>✿</b></div>
+              <div class="sample-shot scene-four"><span>✧</span><b>☺</b></div>
+              <strong>mochibooth ♡</strong>
+            </div>
+            <div class="sample-strip front">
+              <div class="sample-shot scene-two"><span>☺</span><b>✿</b></div>
+              <div class="sample-shot scene-four"><span>✌</span><b>♡</b></div>
+              <div class="sample-shot scene-one"><span>♡</span><b>☺</b></div>
+              <div class="sample-shot scene-three"><span>✿</span><b>✧</b></div>
+              <strong>just us, being us.</strong
+              ><small>MOCHIBOOTH · GOOD TIMES CLUB</small>
+            </div>
+            <div class="sticker love">a little love,<br />a little mochi ♡</div>
+            <span class="art-spark">✦</span>
+          </div>
+        </div>
+        <div class="feature-bar">
+          <span>✧ &nbsp; Your camera. Your little studio.</span
+          ><span>♡ &nbsp; Cute frames, endless possibilities.</span
+          ><span>↓ &nbsp; Keep it. Share it. Love it.</span>
+        </div>
+        <section class="steps" id="steps">
+          <div>
+            <span class="eyebrow">THREE LITTLE STEPS</span>
+            <h2>Good memories look good on you.</h2>
+          </div>
+          <div class="step-grid">
+            <article>
+              <span>01</span>
+              <h3>Find your good side</h3>
+              <p>Turn on your camera, grab a friend, and get comfy.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Make it yours</h3>
+              <p>Pick a frame, add a filter, and leave a little love note.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Keep the moment</h3>
+              <p>Download your photo strip. A tiny keepsake, all yours.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section id="studio" class="page">
+        <div class="page-title">
+          <span class="eyebrow">01 / THE CAMERA</span>
+          <h2>Your moment starts here<span> ✧</span></h2>
+          <p>Get comfy. Be yourself. We'll handle the countdown.</p>
+        </div>
+        <div class="studio-grid">
+          <div class="camera-shell">
+            <div class="camera-view">
+              <video id="video" autoplay muted playsinline></video>
+              <div id="camera-empty">
+                <span>◎</span>
+                <h3>A little space for your smile</h3>
+                <p>Your camera preview will appear here.</p>
+              </div>
+              <div id="countdown" aria-live="assertive"></div>
+              <div id="flash"></div>
+              <span class="live-label">● &nbsp; MOCHI STUDIO</span
+              ><span class="camera-corner">✧</span>
+            </div>
+            <div class="camera-actions">
+            <button id="camera-start" class="primary">
+              Mulai kamera <span>◎</span></button
+            ><button id="capture" class="primary" disabled>
+              Take my photos <span>♡</span></button
+            >
+            </div>
+            <div class="camera-bottom">
+              <span id="progress" aria-live="polite">Ready when you are ♡</span
+              ><button class="text-button" id="switch" disabled>
+                ⇄ Switch camera
+              </button>
+            </div>
+          </div>
+          <aside class="panel">
+            <span class="eyebrow">YOUR SESSION</span>
+            <h3>Four poses? Or six?</h3>
+            <div class="segmented" id="counts">
+              <button data-count="4" class="selected">4 photos</button
+              ><button data-count="6">6 photos</button>
+            </div>
+            <div class="session-tip">
+              ✦
+              <p>
+                Each photo gets a 3-second countdown. Try a new pose after every
+                flash!
+              </p>
+            </div>
+            <button id="reset-session" class="secondary">
+              Retake session
+            </button>
+            <p id="camera-error" class="error" role="alert"></p>
+            <small
+              >🔒 Your photos stay in your browser.<br />Nothing is uploaded.
+              Ever.</small
+            >
+          </aside>
+        </div>
+        <div id="thumbnails" class="thumbnails"></div>
+      </section>
+      <section id="editor" class="page">
+        <div class="page-title">
+          <span class="eyebrow">02 / MAKE IT YOURS</span>
+          <h2>A little finishing touch ♡</h2>
+          <p>Your moments, your mood, your masterpiece.</p>
+        </div>
+        <div class="editor-grid">
+          <div class="preview-surface">
+            <canvas id="preview" aria-label="Your photostrip preview"></canvas>
+          </div>
+          <aside class="panel editor-panel">
+            <h3>Style your strip</h3>
+            <label>Frame color</label>
+            <div id="colors" class="swatches"></div>
+            <label>Photo filter</label>
+            <div id="filters" class="choices"></div>
+            <label for="caption">A little love note</label
+            ><input
+              id="caption"
+              maxlength="45"
+              value="just us, being us."
+              placeholder="Write something sweet…"
+            />
+            <div class="inline">
+              <label for="date">Add today's date</label
+              ><input id="date" type="checkbox" checked />
+            </div>
+            <label>Little decorations</label>
+            <div class="choices" id="decorations">
+              <button data-decoration="none">None</button
+              ><button data-decoration="hearts" class="selected">
+                ♡ Hearts</button
+              ><button data-decoration="stars">✧ Stars</button
+              ><button data-decoration="flowers">✿ Flowers</button>
+            </div>
+            <label>Layout</label>
+            <div class="segmented" id="layouts">
+              <button data-layout="strip" class="selected">Classic strip</button
+              ><button data-layout="grid">Duo columns</button>
+            </div>
+            <button id="finish" class="primary">
+              Love it! Save my strip <span>↗</span></button
+            ><button class="text-button" id="editor-retake">
+              ↶ Retake photos
+            </button>
+          </aside>
+        </div>
+      </section>
+      <section id="result" class="page">
+        <div class="page-title">
+          <span class="eyebrow">03 / IT'S A KEEPER</span>
+          <h2>Small strip. Big memories. ✧</h2>
+          <p>A little piece of today, to keep forever.</p>
+        </div>
+        <div class="result-wrap">
+          <img id="result-image" alt="Your finished MochiBooth photostrip" />
+          <div class="result-actions">
+            <button id="download" class="primary">Download PNG ↓</button
+            ><button id="share" class="secondary" hidden>
+              Share the love ↗</button
+            ><button id="back-editor" class="secondary">Edit my strip</button
+            ><button id="result-retake" class="text-button">
+              ↶ Retake photos</button
+            ><a href="#home" class="text-button">Back to home</a
+            ><small>Made with a little mochi magic ♡</small>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span class="logo">mochibooth ♡</span
+      ><span>Little moments deserve to be kept.</span
+      ><small>MADE FOR THE MEMORIES</small>
+    </footer>
+    <div id="toast" role="status"></div>
+    <script src="js/photostrip.js?v=20261117-smooth-camera"></script>
+    <script src="js/face-tracking.js?v=20261117-smooth-camera"></script>
+    <script src="js/camera.js?v=20261117-smooth-camera"></script>
+    <script src="js/editor.js?v=20261117-face-follow"></script>
+    <script src="js/app.js?v=20261116-portrait-camera"></script>
+  </body>
+</html>
